@@ -12,6 +12,7 @@ Are you coding in Java Language and you ran into need to query helpspot tool (a 
 HelpSpot provides very good rest api to work with and this is an effort to communicate those REST api by help of Java Language. 
 
 Private Api Methods:  http://www.helpspot.com/helpdesk/index.php?pg=kb.page&id=164
+
 Public Api Methods: http://www.helpspot.com/helpdesk/index.php?pg=kb.page&id=163
 
 License:
