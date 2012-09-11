@@ -44,9 +44,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "status")
 public class Status {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sStatus;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xStatus;
 
     /**

@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "categories")
 public class Categories {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected Category category;
 
     /**

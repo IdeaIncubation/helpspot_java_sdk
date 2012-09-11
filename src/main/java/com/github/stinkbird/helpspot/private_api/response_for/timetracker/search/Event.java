@@ -65,31 +65,31 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "event")
 public class Event {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xTimeId;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String xPerson;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger iSeconds;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String dtGMTDate;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String dtGMTDateAdded;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String tDescription;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger sUserId;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sFirstName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sLastName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sEmail;
 
     /**

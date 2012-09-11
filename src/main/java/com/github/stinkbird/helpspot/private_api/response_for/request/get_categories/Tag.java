@@ -44,9 +44,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "tag")
 public class Tag {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xReportingTag;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sReportingTag;
 
     /**

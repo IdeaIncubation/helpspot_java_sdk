@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "results")
 public class Results {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger subscribed;
 
     /**

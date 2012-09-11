@@ -53,18 +53,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "file")
 public class File {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sFileMimeType;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sFilename;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xDocumentId;
-    @XmlElement(name = "public_url", required = true)
+    @XmlElement(name = "public_url", required = false)
     @XmlSchemaType(name = "anyURI")
     protected String publicUrl;
-    @XmlElement(name = "private_url", required = true)
+    @XmlElement(name = "private_url", required = false)
     @XmlSchemaType(name = "anyURI")
     protected String privateUrl;
 

@@ -46,11 +46,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "person")
 public class Person {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xPerson;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String fullname;
-    @XmlElement(name = "assigned_requests", required = true)
+    @XmlElement(name = "assigned_requests", required = false)
     protected BigInteger assignedRequests;
 
     /**

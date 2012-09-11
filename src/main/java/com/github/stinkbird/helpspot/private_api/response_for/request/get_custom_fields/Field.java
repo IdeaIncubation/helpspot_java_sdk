@@ -69,34 +69,34 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "field")
 public class Field {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xCustomField;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String fieldName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger isRequired;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger isPublic;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String fieldType;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger iOrder;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected STxtSize sTxtSize;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected LrgTextRows lrgTextRows;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected ListItems listItems;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger iDecimalPlaces;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SRegex sRegex;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlSchemaType(name = "anyURI")
     protected String sAjaxUrl;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger isAlwaysVisible;
 
     /**

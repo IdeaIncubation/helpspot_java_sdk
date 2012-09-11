@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "requests")
 public class Requests {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<BigInteger> xRequest;
 
     /**

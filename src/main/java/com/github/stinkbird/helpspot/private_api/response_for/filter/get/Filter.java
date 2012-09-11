@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "filter")
 public class Filter {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<Request> request;
 
     /**

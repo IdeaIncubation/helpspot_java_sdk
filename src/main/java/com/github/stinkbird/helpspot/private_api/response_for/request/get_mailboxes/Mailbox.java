@@ -46,11 +46,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "mailbox")
 public class Mailbox {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xMailbox;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sReplyName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sReplyEmail;
 
     /**

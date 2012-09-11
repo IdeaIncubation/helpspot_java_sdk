@@ -44,9 +44,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "request")
 public class Request {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xSubscriptions;
 
     /**

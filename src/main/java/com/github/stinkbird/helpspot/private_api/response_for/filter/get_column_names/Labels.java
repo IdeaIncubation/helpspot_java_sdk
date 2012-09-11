@@ -96,81 +96,81 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "labels")
 public class Labels {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String iLastReplyBy;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String fOpenedVia;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String mailbox;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String fOpen;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String xRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sUserId;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String fullname;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sLastName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sEmail;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sPhone;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String xPersonOpenedBy;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String xPersonAssignedTo;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String xStatus;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sCategory;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sTitle;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String reqsummary;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String lastpublicnote;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String lastpublicnoteby;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String dtGMTOpened;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String dtGMTClosed;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String dtGMTTrashed;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String lastupdate;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String lastpubupdate;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String lastcustupdate;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String ctPublicUpdates;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String age;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String timetrack;

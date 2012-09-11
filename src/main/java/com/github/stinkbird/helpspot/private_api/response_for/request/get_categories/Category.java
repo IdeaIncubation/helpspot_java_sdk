@@ -60,25 +60,25 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "category")
 public class Category {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xCategory;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sCategory;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SCategoryGroup sCategoryGroup;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fDeleted;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fAllowPublicSubmit;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xPersonDefault;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fAutoAssignTo;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SPersonList sPersonList;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SCustomFieldList sCustomFieldList;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected ReportingTags reportingTags;
 
     /**

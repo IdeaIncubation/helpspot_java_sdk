@@ -69,16 +69,16 @@ public class DisplayColumns {
     protected Takeit takeit;
     protected Isunread isunread;
     protected View view;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String fOpenedVia;
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String fOpen;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String fullname;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String reqsummary;
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")

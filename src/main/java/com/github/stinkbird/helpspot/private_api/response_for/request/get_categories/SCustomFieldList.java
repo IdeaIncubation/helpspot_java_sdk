@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "sCustomFieldList")
 public class SCustomFieldList {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<BigInteger> xCustomField;
 
     /**

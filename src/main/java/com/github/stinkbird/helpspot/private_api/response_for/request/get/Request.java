@@ -89,57 +89,57 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "request")
 public class Request {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String fOpenedVia;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xOpenedViaId;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected XPersonOpenedBy xPersonOpenedBy;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String xPersonAssignedTo;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fOpen;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String xStatus;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fUrgent;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String xCategory;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String dtGMTOpened;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected DtGMTClosed dtGMTClosed;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sRequestPassword;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected STitle sTitle;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger sUserId;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SFirstName sFirstName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SLastName sLastName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SEmail sEmail;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SPhone sPhone;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String iLastReplyBy;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fTrash;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected DtGMTTrashed dtGMTTrashed;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected Fullname fullname;
-    @XmlElement(name = "request_history", required = true)
+    @XmlElement(name = "request_history", required = false)
     protected RequestHistory requestHistory;
 
     /**

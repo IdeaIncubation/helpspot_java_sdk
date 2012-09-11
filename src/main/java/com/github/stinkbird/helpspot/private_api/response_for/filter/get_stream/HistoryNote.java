@@ -58,23 +58,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "history_note")
 public class HistoryNote {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequestHistory;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xPerson;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger dtGMTChange;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fPublic;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fInitial;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String tNote;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNoteIsHTML;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fMergedFromRequest;
 
     /**

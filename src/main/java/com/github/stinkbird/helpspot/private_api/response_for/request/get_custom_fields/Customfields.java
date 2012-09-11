@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "customfields")
 public class Customfields {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<Field> field;
 
     /**

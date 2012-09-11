@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "reportingTags")
 public class ReportingTags {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<Tag> tag;
 
     /**

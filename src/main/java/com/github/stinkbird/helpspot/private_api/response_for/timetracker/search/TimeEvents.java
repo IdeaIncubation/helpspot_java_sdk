@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "time_events")
 public class TimeEvents {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected Event event;
 
     /**

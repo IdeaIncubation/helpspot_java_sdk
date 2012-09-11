@@ -57,21 +57,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "filter")
 public class Filter {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NMTOKEN")
     protected String xFilter;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sFilterName;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected DisplayColumns displayColumns;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fGlobal;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sFilterFolder;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger count;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String unread;
 
     /**

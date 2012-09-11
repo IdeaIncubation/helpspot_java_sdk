@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "staff")
 public class Staff {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<Person> person;
 
     /**

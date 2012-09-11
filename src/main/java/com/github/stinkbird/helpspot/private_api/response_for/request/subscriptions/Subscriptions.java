@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "subscriptions")
 public class Subscriptions {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<Request> request;
 
     /**

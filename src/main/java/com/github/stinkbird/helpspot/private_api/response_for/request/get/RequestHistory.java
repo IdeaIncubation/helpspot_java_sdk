@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "request_history")
 public class RequestHistory {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected List<Item> item;
 
     /**

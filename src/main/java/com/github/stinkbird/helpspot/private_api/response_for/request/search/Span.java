@@ -45,7 +45,7 @@ public class Span {
 
     @XmlValue
     protected String content;
-    @XmlAttribute(name = "class", required = true)
+    @XmlAttribute(name = "class", required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String clazz;

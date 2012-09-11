@@ -101,73 +101,73 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement(name = "preferences")
 public class Preferences {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xPerson;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sFname;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sLname;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SUsername sUsername;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String sEmail;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected SEmail2 sEmail2;
-    @XmlElement(name = "sSMS", required = true)
+    @XmlElement(name = "sSMS", required = false)
     protected SSMS ssms;
-    @XmlElement(name = "xSMSService", required = true)
+    @XmlElement(name = "xSMSService", required = false)
     protected BigInteger xsmsService;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sPhone;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String tSignature;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String tMobileSignature;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNotifyEmail;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNotifyEmail2;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNotifySMS;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNotifySMSUrgent;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xPersonPhotoId;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fUserType;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xPersonOutOfOffice;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNotifyNewRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fDeleted;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String sWorkspaceDefault;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fDefaultToPublic;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fDefaultTTOpen;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fHideWysiwyg;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fHideImages;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger iRequestHistoryLimit;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fReturnToReq;
-    @XmlElement(name = "sHTMLEditor", required = true)
+    @XmlElement(name = "sHTMLEditor", required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NCName")
     protected String shtmlEditor;
-    @XmlElement(name = "tSignature_HTML", required = true)
+    @XmlElement(name = "tSignature_HTML", required = false)
     protected String tSignatureHTML;
 
     /**

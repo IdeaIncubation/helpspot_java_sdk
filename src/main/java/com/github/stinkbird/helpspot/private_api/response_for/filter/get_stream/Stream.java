@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "stream")
 public class Stream {
 
-    @XmlElement(name = "history_note", required = true)
+    @XmlElement(name = "history_note", required = false)
     protected HistoryNote historyNote;
 
     /**
