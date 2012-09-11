@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="requests">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xRequest"/>
+        <xs:element ref="fOpenedVia"/>
+        <xs:element ref="xOpenedViaId"/>
+        <xs:element ref="xPortal"/>
+        <xs:element ref="xMailboxToSendFrom"/>
+        <xs:element ref="xPersonOpenedBy"/>
+        <xs:element ref="xPersonAssignedTo"/>
+        <xs:element ref="fOpen"/>
+        <xs:element ref="xStatus"/>
+        <xs:element ref="fUrgent"/>
+        <xs:element ref="xCategory"/>
+        <xs:element ref="dtGMTOpened"/>
+        <xs:element ref="dtGMTClosed"/>
+        <xs:element ref="iLastReplyBy"/>
+        <xs:element ref="fTrash"/>
+        <xs:element ref="dtGMTTrashed"/>
+        <xs:element ref="sRequestPassword"/>
+        <xs:element ref="sTitle"/>
+        <xs:element ref="sUserId"/>
+        <xs:element ref="sFirstName"/>
+        <xs:element ref="sLastName"/>
+        <xs:element ref="sEmail"/>
+        <xs:element ref="sPhone"/>
+        <xs:element ref="Custom1"/>
+        <xs:element ref="Custom3"/>
+        <xs:element ref="Custom5"/>
+        <xs:element ref="Custom6"/>
+        <xs:element ref="Custom7"/>
+        <xs:element ref="Custom9"/>
+        <xs:element ref="Custom10"/>
+        <xs:element ref="Custom11"/>
+        <xs:element ref="Custom12"/>
+        <xs:element ref="fullname"/>
+        <xs:element ref="tNote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xRequest" type="xs:integer"/>
+  <xs:element name="fOpenedVia" type="xs:string"/>
+  <xs:element name="xOpenedViaId" type="xs:string"/>
+  <xs:element name="xPortal" type="xs:integer"/>
+  <xs:element name="xMailboxToSendFrom" type="xs:integer"/>
+  <xs:element name="xPersonOpenedBy" type="xs:string"/>
+  <xs:element name="xPersonAssignedTo" type="xs:string"/>
+  <xs:element name="fOpen" type="xs:integer"/>
+  <xs:element name="xStatus" type="xs:string"/>
+  <xs:element name="fUrgent" type="xs:integer"/>
+  <xs:element name="xCategory" type="xs:string"/>
+  <xs:element name="dtGMTOpened" type="xs:string"/>
+  <xs:element name="dtGMTClosed" type="xs:string"/>
+  <xs:element name="iLastReplyBy" type="xs:string"/>
+  <xs:element name="fTrash" type="xs:integer"/>
+  <xs:element name="dtGMTTrashed">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sRequestPassword" type="xs:NCName"/>
+  <xs:element name="sTitle" type="xs:string"/>
+  <xs:element name="sUserId" type="xs:integer"/>
+  <xs:element name="sFirstName" type="xs:NCName"/>
+  <xs:element name="sLastName" type="xs:NCName"/>
+  <xs:element name="sEmail" type="xs:string"/>
+  <xs:element name="sPhone" type="xs:string"/>
+  <xs:element name="Custom1" type="xs:string"/>
+  <xs:element name="Custom3">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Custom5" type="xs:string"/>
+  <xs:element name="Custom6">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Custom7" type="xs:string"/>
+  <xs:element name="Custom9" type="xs:string"/>
+  <xs:element name="Custom10">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Custom11">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Custom12">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fullname" type="xs:string"/>
+  <xs:element name="tNote" type="xs:string"/>
+</xs:schema>
