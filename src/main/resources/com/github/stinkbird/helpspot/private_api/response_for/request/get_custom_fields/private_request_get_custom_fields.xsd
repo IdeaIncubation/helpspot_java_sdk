@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="customfields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="field"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="field">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xCustomField"/>
+        <xs:element ref="fieldName"/>
+        <xs:element ref="isRequired"/>
+        <xs:element ref="isPublic"/>
+        <xs:element ref="fieldType"/>
+        <xs:element ref="iOrder"/>
+        <xs:element ref="sTxtSize"/>
+        <xs:element ref="lrgTextRows"/>
+        <xs:element ref="listItems"/>
+        <xs:element ref="iDecimalPlaces"/>
+        <xs:element ref="sRegex"/>
+        <xs:element ref="sAjaxUrl"/>
+        <xs:element ref="isAlwaysVisible"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xCustomField" type="xs:integer"/>
+  <xs:element name="fieldName" type="xs:string"/>
+  <xs:element name="isRequired" type="xs:integer"/>
+  <xs:element name="isPublic" type="xs:integer"/>
+  <xs:element name="fieldType" type="xs:NCName"/>
+  <xs:element name="iOrder" type="xs:integer"/>
+  <xs:element name="sTxtSize">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="lrgTextRows">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="listItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="item"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="item" type="xs:string"/>
+  <xs:element name="iDecimalPlaces" type="xs:integer"/>
+  <xs:element name="sRegex">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sAjaxUrl" type="xs:anyURI"/>
+  <xs:element name="isAlwaysVisible" type="xs:integer"/>
+</xs:schema>

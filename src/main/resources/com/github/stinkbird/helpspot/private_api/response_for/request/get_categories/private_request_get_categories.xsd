@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="categories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="category"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xCategory"/>
+        <xs:element ref="sCategory"/>
+        <xs:element ref="sCategoryGroup"/>
+        <xs:element ref="fDeleted"/>
+        <xs:element ref="fAllowPublicSubmit"/>
+        <xs:element ref="xPersonDefault"/>
+        <xs:element ref="fAutoAssignTo"/>
+        <xs:element ref="sPersonList"/>
+        <xs:element ref="sCustomFieldList"/>
+        <xs:element ref="reportingTags"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xCategory" type="xs:integer"/>
+  <xs:element name="sCategory" type="xs:string"/>
+  <xs:element name="sCategoryGroup">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fDeleted" type="xs:integer"/>
+  <xs:element name="fAllowPublicSubmit" type="xs:integer"/>
+  <xs:element name="xPersonDefault" type="xs:integer"/>
+  <xs:element name="fAutoAssignTo" type="xs:integer"/>
+  <xs:element name="sPersonList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="person"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xPerson"/>
+        <xs:element ref="fullname"/>
+        <xs:element ref="assigned_requests"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xPerson" type="xs:integer"/>
+  <xs:element name="fullname" type="xs:string"/>
+  <xs:element name="assigned_requests" type="xs:integer"/>
+  <xs:element name="sCustomFieldList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="xCustomField"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xCustomField" type="xs:integer"/>
+  <xs:element name="reportingTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="tag"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xReportingTag"/>
+        <xs:element ref="sReportingTag"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xReportingTag" type="xs:integer"/>
+  <xs:element name="sReportingTag" type="xs:string"/>
+</xs:schema>

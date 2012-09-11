@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mailbox"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mailbox">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xMailbox"/>
+        <xs:element ref="sReplyName"/>
+        <xs:element ref="sReplyEmail"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xMailbox" type="xs:integer"/>
+  <xs:element name="sReplyName" type="xs:string"/>
+  <xs:element name="sReplyEmail" type="xs:string"/>
+</xs:schema>

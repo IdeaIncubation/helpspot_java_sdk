@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="staff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="person"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xPerson"/>
+        <xs:element ref="sFname"/>
+        <xs:element ref="sLname"/>
+        <xs:element ref="sUsername"/>
+        <xs:element ref="sEmail"/>
+        <xs:element ref="sEmail2"/>
+        <xs:element ref="sSMS"/>
+        <xs:element ref="xSMSService"/>
+        <xs:element ref="sPhone"/>
+        <xs:element ref="tSignature"/>
+        <xs:element ref="tMobileSignature"/>
+        <xs:element ref="fNotifyEmail"/>
+        <xs:element ref="fNotifyEmail2"/>
+        <xs:element ref="fNotifySMS"/>
+        <xs:element ref="fNotifySMSUrgent"/>
+        <xs:element ref="xPersonPhotoId"/>
+        <xs:element ref="fUserType"/>
+        <xs:element ref="xPersonOutOfOffice"/>
+        <xs:element ref="fNotifyNewRequest"/>
+        <xs:element ref="fDeleted"/>
+        <xs:element ref="sWorkspaceDefault"/>
+        <xs:element ref="fDefaultToPublic"/>
+        <xs:element ref="fDefaultTTOpen"/>
+        <xs:element ref="fHideWysiwyg"/>
+        <xs:element ref="fHideImages"/>
+        <xs:element ref="iRequestHistoryLimit"/>
+        <xs:element ref="fReturnToReq"/>
+        <xs:element ref="sHTMLEditor"/>
+        <xs:element ref="tSignature_HTML"/>
+        <xs:element ref="fullname"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xPerson" type="xs:integer"/>
+  <xs:element name="sFname" type="xs:NCName"/>
+  <xs:element name="sLname" type="xs:NCName"/>
+  <xs:element name="sUsername">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sEmail" type="xs:string"/>
+  <xs:element name="sEmail2">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sSMS">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="xSMSService" type="xs:integer"/>
+  <xs:element name="sPhone" type="xs:NCName"/>
+  <xs:element name="tSignature" type="xs:string"/>
+  <xs:element name="tMobileSignature" type="xs:string"/>
+  <xs:element name="fNotifyEmail" type="xs:integer"/>
+  <xs:element name="fNotifyEmail2" type="xs:integer"/>
+  <xs:element name="fNotifySMS" type="xs:integer"/>
+  <xs:element name="fNotifySMSUrgent" type="xs:integer"/>
+  <xs:element name="xPersonPhotoId" type="xs:integer"/>
+  <xs:element name="fUserType" type="xs:integer"/>
+  <xs:element name="xPersonOutOfOffice" type="xs:integer"/>
+  <xs:element name="fNotifyNewRequest" type="xs:integer"/>
+  <xs:element name="fDeleted" type="xs:integer"/>
+  <xs:element name="sWorkspaceDefault" type="xs:NCName"/>
+  <xs:element name="fDefaultToPublic" type="xs:integer"/>
+  <xs:element name="fDefaultTTOpen" type="xs:integer"/>
+  <xs:element name="fHideWysiwyg" type="xs:integer"/>
+  <xs:element name="fHideImages" type="xs:integer"/>
+  <xs:element name="iRequestHistoryLimit" type="xs:integer"/>
+  <xs:element name="fReturnToReq" type="xs:integer"/>
+  <xs:element name="sHTMLEditor" type="xs:NCName"/>
+  <xs:element name="tSignature_HTML" type="xs:string"/>
+  <xs:element name="fullname" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="stream">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="history_note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="history_note">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xRequestHistory"/>
+        <xs:element ref="xRequest"/>
+        <xs:element ref="xPerson"/>
+        <xs:element ref="dtGMTChange"/>
+        <xs:element ref="fPublic"/>
+        <xs:element ref="fInitial"/>
+        <xs:element ref="tNote"/>
+        <xs:element ref="fNoteIsHTML"/>
+        <xs:element ref="fMergedFromRequest"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xRequestHistory" type="xs:integer"/>
+  <xs:element name="xRequest" type="xs:integer"/>
+  <xs:element name="xPerson" type="xs:integer"/>
+  <xs:element name="dtGMTChange" type="xs:integer"/>
+  <xs:element name="fPublic" type="xs:integer"/>
+  <xs:element name="fInitial" type="xs:integer"/>
+  <xs:element name="tNote" type="xs:string"/>
+  <xs:element name="fNoteIsHTML" type="xs:integer"/>
+  <xs:element name="fMergedFromRequest" type="xs:integer"/>
+</xs:schema>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="labels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="iLastReplyBy"/>
+        <xs:element ref="fOpenedVia"/>
+        <xs:element ref="mailbox"/>
+        <xs:element ref="fOpen"/>
+        <xs:element ref="xRequest"/>
+        <xs:element ref="sUserId"/>
+        <xs:element ref="fullname"/>
+        <xs:element ref="sLastName"/>
+        <xs:element ref="sEmail"/>
+        <xs:element ref="sPhone"/>
+        <xs:element ref="xPersonOpenedBy"/>
+        <xs:element ref="xPersonAssignedTo"/>
+        <xs:element ref="xStatus"/>
+        <xs:element ref="sCategory"/>
+        <xs:element ref="sTitle"/>
+        <xs:element ref="reqsummary"/>
+        <xs:element ref="lastpublicnote"/>
+        <xs:element ref="lastpublicnoteby"/>
+        <xs:element ref="dtGMTOpened"/>
+        <xs:element ref="dtGMTClosed"/>
+        <xs:element ref="dtGMTTrashed"/>
+        <xs:element ref="lastupdate"/>
+        <xs:element ref="lastpubupdate"/>
+        <xs:element ref="lastcustupdate"/>
+        <xs:element ref="ctPublicUpdates"/>
+        <xs:element ref="age"/>
+        <xs:element ref="timetrack"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="iLastReplyBy" type="xs:string"/>
+  <xs:element name="fOpenedVia" type="xs:string"/>
+  <xs:element name="mailbox" type="xs:NCName"/>
+  <xs:element name="fOpen" type="xs:NCName"/>
+  <xs:element name="xRequest" type="xs:NCName"/>
+  <xs:element name="sUserId" type="xs:string"/>
+  <xs:element name="fullname" type="xs:NCName"/>
+  <xs:element name="sLastName" type="xs:string"/>
+  <xs:element name="sEmail" type="xs:NCName"/>
+  <xs:element name="sPhone" type="xs:NCName"/>
+  <xs:element name="xPersonOpenedBy" type="xs:string"/>
+  <xs:element name="xPersonAssignedTo" type="xs:string"/>
+  <xs:element name="xStatus" type="xs:NCName"/>
+  <xs:element name="sCategory" type="xs:NCName"/>
+  <xs:element name="sTitle" type="xs:string"/>
+  <xs:element name="reqsummary" type="xs:string"/>
+  <xs:element name="lastpublicnote" type="xs:string"/>
+  <xs:element name="lastpublicnoteby" type="xs:string"/>
+  <xs:element name="dtGMTOpened" type="xs:NCName"/>
+  <xs:element name="dtGMTClosed" type="xs:NCName"/>
+  <xs:element name="dtGMTTrashed" type="xs:string"/>
+  <xs:element name="lastupdate" type="xs:string"/>
+  <xs:element name="lastpubupdate" type="xs:string"/>
+  <xs:element name="lastcustupdate" type="xs:string"/>
+  <xs:element name="ctPublicUpdates" type="xs:string"/>
+  <xs:element name="age" type="xs:NCName"/>
+  <xs:element name="timetrack" type="xs:NCName"/>
+</xs:schema>

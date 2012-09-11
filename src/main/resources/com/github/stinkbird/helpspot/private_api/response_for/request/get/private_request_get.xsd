@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xRequest"/>
+        <xs:element ref="fOpenedVia"/>
+        <xs:element ref="xOpenedViaId"/>
+        <xs:element ref="xPersonOpenedBy"/>
+        <xs:element ref="xPersonAssignedTo"/>
+        <xs:element ref="fOpen"/>
+        <xs:element ref="xStatus"/>
+        <xs:element ref="fUrgent"/>
+        <xs:element ref="xCategory"/>
+        <xs:element ref="dtGMTOpened"/>
+        <xs:element ref="dtGMTClosed"/>
+        <xs:element ref="sRequestPassword"/>
+        <xs:element ref="sTitle"/>
+        <xs:element ref="sUserId"/>
+        <xs:element ref="sFirstName"/>
+        <xs:element ref="sLastName"/>
+        <xs:element ref="sEmail"/>
+        <xs:element ref="sPhone"/>
+        <xs:element ref="iLastReplyBy"/>
+        <xs:element ref="fTrash"/>
+        <xs:element ref="dtGMTTrashed"/>
+        <xs:element ref="fullname"/>
+        <xs:element ref="request_history"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fOpenedVia" type="xs:string"/>
+  <xs:element name="xOpenedViaId" type="xs:integer"/>
+  <xs:element name="xPersonOpenedBy">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="xPersonAssignedTo" type="xs:string"/>
+  <xs:element name="fOpen" type="xs:integer"/>
+  <xs:element name="xStatus" type="xs:NCName"/>
+  <xs:element name="fUrgent" type="xs:integer"/>
+  <xs:element name="xCategory" type="xs:NCName"/>
+  <xs:element name="dtGMTOpened" type="xs:string"/>
+  <xs:element name="dtGMTClosed">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sRequestPassword" type="xs:NCName"/>
+  <xs:element name="sTitle">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sUserId" type="xs:integer"/>
+  <xs:element name="sFirstName">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sLastName">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sEmail">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sPhone">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="iLastReplyBy" type="xs:string"/>
+  <xs:element name="fTrash" type="xs:integer"/>
+  <xs:element name="dtGMTTrashed">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fullname">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="request_history">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="item"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xRequestHistory"/>
+        <xs:element ref="xRequest"/>
+        <xs:element ref="xPerson"/>
+        <xs:element ref="dtGMTChange"/>
+        <xs:element ref="fPublic"/>
+        <xs:element ref="fInitial"/>
+        <xs:element ref="tLog"/>
+        <xs:element ref="tNote"/>
+        <xs:element ref="tEmailHeaders"/>
+        <xs:element ref="fNoteIsHTML"/>
+        <xs:element ref="fMergedFromRequest"/>
+        <xs:element minOccurs="0" ref="files"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xRequestHistory" type="xs:integer"/>
+  <xs:element name="xPerson" type="xs:string"/>
+  <xs:element name="dtGMTChange" type="xs:string"/>
+  <xs:element name="fPublic" type="xs:integer"/>
+  <xs:element name="fInitial" type="xs:integer"/>
+  <xs:element name="tLog" type="xs:string"/>
+  <xs:element name="tNote">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="p" type="xs:string"/>
+  <xs:element name="tEmailHeaders">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fNoteIsHTML" type="xs:integer"/>
+  <xs:element name="fMergedFromRequest" type="xs:integer"/>
+  <xs:element name="files">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="file"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="file">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sFileMimeType"/>
+        <xs:element ref="sFilename"/>
+        <xs:element ref="xDocumentId"/>
+        <xs:element ref="public_url"/>
+        <xs:element ref="private_url"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sFileMimeType" type="xs:string"/>
+  <xs:element name="sFilename" type="xs:NCName"/>
+  <xs:element name="xDocumentId" type="xs:integer"/>
+  <xs:element name="public_url" type="xs:anyURI"/>
+  <xs:element name="private_url" type="xs:anyURI"/>
+  <xs:element name="xRequest" type="xs:integer"/>
+</xs:schema>

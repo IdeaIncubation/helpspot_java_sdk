@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="filters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="filter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xFilter"/>
+        <xs:element ref="sFilterName"/>
+        <xs:element ref="displayColumns"/>
+        <xs:element ref="fGlobal"/>
+        <xs:element ref="sFilterFolder"/>
+        <xs:element ref="count"/>
+        <xs:element ref="unread"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xFilter" type="xs:NMTOKEN"/>
+  <xs:element name="sFilterName" type="xs:string"/>
+  <xs:element name="displayColumns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0">
+          <xs:element ref="takeit"/>
+          <xs:sequence>
+            <xs:element ref="isunread"/>
+            <xs:element ref="view"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element ref="fOpenedVia"/>
+        <xs:element minOccurs="0" ref="fOpen"/>
+        <xs:element ref="fullname"/>
+        <xs:element ref="reqsummary"/>
+        <xs:choice>
+          <xs:element ref="age"/>
+          <xs:element ref="dtGMTOpened"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="takeit">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="isunread">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="view">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fOpenedVia" type="xs:string"/>
+  <xs:element name="fOpen" type="xs:NCName"/>
+  <xs:element name="fullname" type="xs:NCName"/>
+  <xs:element name="reqsummary" type="xs:string"/>
+  <xs:element name="age" type="xs:NCName"/>
+  <xs:element name="dtGMTOpened" type="xs:NCName"/>
+  <xs:element name="fGlobal" type="xs:integer"/>
+  <xs:element name="sFilterFolder" type="xs:string"/>
+  <xs:element name="count" type="xs:integer"/>
+  <xs:element name="unread" type="xs:string"/>
+</xs:schema>

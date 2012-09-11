@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="time_events">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="event"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="event">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xTimeId"/>
+        <xs:element ref="xRequest"/>
+        <xs:element ref="xPerson"/>
+        <xs:element ref="iSeconds"/>
+        <xs:element ref="dtGMTDate"/>
+        <xs:element ref="dtGMTDateAdded"/>
+        <xs:element ref="tDescription"/>
+        <xs:element ref="sUserId"/>
+        <xs:element ref="sFirstName"/>
+        <xs:element ref="sLastName"/>
+        <xs:element ref="sEmail"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xTimeId" type="xs:integer"/>
+  <xs:element name="xRequest" type="xs:integer"/>
+  <xs:element name="xPerson" type="xs:string"/>
+  <xs:element name="iSeconds" type="xs:integer"/>
+  <xs:element name="dtGMTDate" type="xs:string"/>
+  <xs:element name="dtGMTDateAdded" type="xs:string"/>
+  <xs:element name="tDescription" type="xs:string"/>
+  <xs:element name="sUserId" type="xs:integer"/>
+  <xs:element name="sFirstName" type="xs:NCName"/>
+  <xs:element name="sLastName" type="xs:NCName"/>
+  <xs:element name="sEmail" type="xs:string"/>
+</xs:schema>
