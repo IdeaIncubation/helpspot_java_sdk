@@ -20,7 +20,8 @@ import org.apache.commons.httpclient.protocol.Protocol;
 import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;
 
 import com.github.stinkbird.helpspot.private_api.exception.InitializationException;
-import com.github.stinkbird.helpspot.private_api.exception.ValidationException;
+import com.github.stinkbird.helpspot.private_api.query.QueryPreparationHelperUtil;
+import com.github.stinkbird.helpspot.private_api.validation.RequestParameterValidator;
 
 /**
  * This is a private-api facade object.
@@ -39,7 +40,7 @@ public class PrivateApiUtil {
 	private String helpSpotHostNameOrIPAddress;		
 	
 	private static PrivateApiUtil singletonRef;
-	
+		
 	private PrivateApiUtil(String helpSpotHostNameOrIPAddress, 
 			               int portNumber,
 			               boolean isSecureHttp,
@@ -48,7 +49,7 @@ public class PrivateApiUtil {
 			               String helpSpotAdminPassword) {
 		
 		boolean isHostProvided = helpSpotHostNameOrIPAddress != null && !"".equals(helpSpotHostNameOrIPAddress.trim());
-		boolean isPortProvided = portNumber <= 0;
+		boolean isPortProvided = !(portNumber <= 0);
 		boolean isProtocolSocketFactoryProvided = protocolSocketFactory != null;
 		boolean isHostUsernameProvided = helpSpotAdminUsername != null && !"".equals(helpSpotAdminUsername.trim());
 		boolean isHostPasswordProvided = helpSpotAdminPassword != null && !"".equals(helpSpotAdminPassword.trim());
@@ -60,7 +61,7 @@ public class PrivateApiUtil {
 			Credentials defaultcreds = new UsernamePasswordCredentials(helpSpotAdminUsername.trim(), helpSpotAdminPassword.trim());
 			this.client.getState().setCredentials(new AuthScope(helpSpotHostNameOrIPAddress.trim(), portNumber, AuthScope.ANY_REALM), defaultcreds);			
 			
-			Protocol.registerProtocol(PROTOCOL, new Protocol(isSecureHttp == true? "https" : "http", protocolSocketFactory, portNumber));
+			Protocol.registerProtocol(PROTOCOL, new Protocol(isSecureHttp == true? PROTOCOL : "http", protocolSocketFactory, portNumber));
 			
 			this.helpSpotHostNameOrIPAddress = helpSpotHostNameOrIPAddress;
 			
@@ -124,7 +125,7 @@ public class PrivateApiUtil {
 	/**
 	 * This method calls private.request.get method on private api of helpspot. 
 	 * 
-	 * It retrieves detail information about particular helpspot request with all notes stored in request history log. 
+	 * It retrieves detail information about particular helpspot request in addition to all notes stored in request history log. 
 	 * 
 	 * @return Request
 	 * @throws IOException 
@@ -134,18 +135,12 @@ public class PrivateApiUtil {
 	public com.github.stinkbird.helpspot.private_api.response_for.request.get.Request callPrivateRequestGet(String xRequest, 
 																											boolean isPostRequest) 
 	throws HttpException, IOException, JAXBException {
-		
-		// define private method base
-		String methodName = "private.request.get";
-		
+			
 		// Validate Required parameters
-		boolean isXRequestPresent = xRequest != null && !"".equals(xRequest.trim());
-		if(!isXRequestPresent) {
-			throw new ValidationException("xRequest is required parameter to call private.request.get on helpspot private api.");
-		} 
-		
+		RequestParameterValidator.validateRequiredParametersForPrivateRequestGet(xRequest);
+				
 		// Prepare query string
-		String queryString = "method=" + methodName + "&" + "xRequest=" + xRequest;
+		String queryString = QueryPreparationHelperUtil.prepareQueryStringForPrivateRequestGet(xRequest);
 		
 		// Prepare method base
 		HttpMethodBase methodBase = isPostRequest ? getPostMethod(queryString) : getGetMethod(queryString);
@@ -160,5 +155,62 @@ public class PrivateApiUtil {
 		return (com.github.stinkbird.helpspot.private_api.response_for.request.get.Request) u.unmarshal( new StreamSource( new StringReader( xmlStr.toString() ) ) );
 		
 	}
+	
+	/**
+	 * This method calls private.request.search to retrieve helpspot tickets matching query parameters. 
+	 * 
+	 * @param sUserId
+	 * @param isPostRequest
+	 * @return
+	 * @throws HttpException
+	 * @throws IOException
+	 * @throws JAXBException
+	 */
+	public com.github.stinkbird.helpspot.private_api.response_for.request.search.Requests callPrivateRequestSearch(String sUserId, 
+			                                                                                                       boolean isPostRequest) 
+    throws HttpException, IOException, JAXBException {
+		
+		// No validation required for this call.
+		
+		// Prepare query string
+		String queryString = QueryPreparationHelperUtil.prepareQueryStringForPrivateRequestSearch(sUserId);
+		
+		// Prepare method base
+		HttpMethodBase methodBase = isPostRequest ? getPostMethod(queryString) : getGetMethod(queryString);
+		
+		// Make api call on method base
+		client.executeMethod(methodBase);
+		
+		// Unmarshall the response object
+		JAXBContext jc = JAXBContext.newInstance( com.github.stinkbird.helpspot.private_api.response_for.request.search.Requests.class.getPackage().getName() );
+		Unmarshaller u = jc.createUnmarshaller();
+		StringBuffer xmlStr = new StringBuffer( methodBase.getResponseBodyAsString() );
+		return (com.github.stinkbird.helpspot.private_api.response_for.request.search.Requests) u.unmarshal( new StreamSource( new StringReader( xmlStr.toString() ) ) );
+				
+	}
+	
+	public com.github.stinkbird.helpspot.private_api.response_for.request.get_time_events.TimeEvents callPrivateRequestGetTimeEvents(String xRequest, 
+																																     boolean isPostRequest) 
+	throws HttpException, IOException, JAXBException {
+		
+		// Validate Required parameters
+		RequestParameterValidator.validateRequiredParametersForPrivateRequestGetTimeEvents(xRequest);
+				
+		// Prepare query string
+		String queryString = QueryPreparationHelperUtil.prepareQueryStringForPrivateRequestGetTimeEvents(xRequest);
+		
+		// Prepare method base
+		HttpMethodBase methodBase = isPostRequest ? getPostMethod(queryString) : getGetMethod(queryString);
+		
+		// Make api call on method base
+		client.executeMethod(methodBase);
+		
+		// Unmarshall the response object
+		JAXBContext jc = JAXBContext.newInstance( com.github.stinkbird.helpspot.private_api.response_for.request.get_time_events.TimeEvents.class.getPackage().getName() );
+		Unmarshaller u = jc.createUnmarshaller();
+		StringBuffer xmlStr = new StringBuffer( methodBase.getResponseBodyAsString() );
+		return (com.github.stinkbird.helpspot.private_api.response_for.request.get_time_events.TimeEvents) u.unmarshal( new StreamSource( new StringReader( xmlStr.toString() ) ) );
+	}
+	
 
 }
