@@ -46,6 +46,14 @@ project, you also have to copy compile time dependency jars with newly created j
 If your project is using Maven you can use groupid/artifactid/version of this project to build your project and it will automatically download all 
 required dependency. 
 
+SonaType Snapshot Maven Repository: https://oss.sonatype.org/content/repositories/snapshots
+
+groupId = com.github.stinkbird
+
+artifactId = helpspot_java_sdk
+
+version = 1.0-SNAPSHOT
+
 
 How to use this sdk?
 --------------------
