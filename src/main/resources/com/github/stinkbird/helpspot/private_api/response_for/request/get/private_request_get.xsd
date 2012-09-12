@@ -31,43 +31,25 @@
   </xs:element>
   <xs:element name="fOpenedVia" type="xs:string"/>
   <xs:element name="xOpenedViaId" type="xs:integer"/>
-  <xs:element name="xPersonOpenedBy">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="xPersonOpenedBy" type="xs:string"/>
   <xs:element name="xPersonAssignedTo" type="xs:string"/>
   <xs:element name="fOpen" type="xs:integer"/>
   <xs:element name="xStatus" type="xs:NCName"/>
   <xs:element name="fUrgent" type="xs:integer"/>
   <xs:element name="xCategory" type="xs:NCName"/>
   <xs:element name="dtGMTOpened" type="xs:string"/>
-  <xs:element name="dtGMTClosed">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="dtGMTClosed" type="xs:string"/>
   <xs:element name="sRequestPassword" type="xs:NCName"/>
-  <xs:element name="sTitle">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="sTitle" type="xs:string"/>
   <xs:element name="sUserId" type="xs:integer"/>
-  <xs:element name="sFirstName">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="sLastName">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="sEmail">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="sPhone">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="sFirstName" type="xs:string"/>
+  <xs:element name="sLastName" type="xs:string"/>
+  <xs:element name="sEmail" type="xs:string"/>
+  <xs:element name="sPhone" type="xs:string"/>
   <xs:element name="iLastReplyBy" type="xs:string"/>
   <xs:element name="fTrash" type="xs:integer"/>
-  <xs:element name="dtGMTTrashed">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="fullname">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="dtGMTTrashed" type="xs:string"/>
+  <xs:element name="fullname" type="xs:string"/>
   <xs:element name="request_history">
     <xs:complexType>
       <xs:sequence>
@@ -107,9 +89,7 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="p" type="xs:string"/>
-  <xs:element name="tEmailHeaders">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="tEmailHeaders" type="xs:string"/>
   <xs:element name="fNoteIsHTML" type="xs:integer"/>
   <xs:element name="fMergedFromRequest" type="xs:integer"/>
   <xs:element name="files">

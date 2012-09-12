@@ -14,6 +14,7 @@
         <xs:element ref="xRequest"/>
         <xs:element ref="xPerson"/>
         <xs:element ref="iSeconds"/>
+        <xs:element ref="fBillable"/>
         <xs:element ref="dtGMTDate"/>
         <xs:element ref="dtGMTDateAdded"/>
         <xs:element ref="tDescription"/>
@@ -24,6 +25,7 @@
   <xs:element name="xRequest" type="xs:integer"/>
   <xs:element name="xPerson" type="xs:string"/>
   <xs:element name="iSeconds" type="xs:integer"/>
+  <xs:element name="fBillable" type="xs:integer"/>
   <xs:element name="dtGMTDate" type="xs:string"/>
   <xs:element name="dtGMTDateAdded" type="xs:string"/>
   <xs:element name="tDescription" type="xs:string"/>
