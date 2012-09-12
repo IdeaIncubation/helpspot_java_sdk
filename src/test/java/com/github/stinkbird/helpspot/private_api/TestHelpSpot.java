@@ -61,10 +61,7 @@ public class TestHelpSpot {
 				if(isUseFakeCertificate) {
 					protocolSocketFactory = new FakeSslClientSocketFactory();
 				} else {
-					FileInputStream fIn = new FileInputStream(keystoreFileNameWithFullPath);
-		            KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
-		            keystore.load(fIn, null);
-					protocolSocketFactory = new KeystoreCertSslClientSocketFactory(keystore);
+					protocolSocketFactory = createProtocolSocketFactoryFromKeyStoreFile(keystoreFileNameWithFullPath);
 				}
 			}
 			
