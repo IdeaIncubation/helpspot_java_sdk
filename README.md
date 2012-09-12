@@ -48,9 +48,9 @@ required dependency.
 
 SonaType Snapshot Maven Repository: https://oss.sonatype.org/content/repositories/snapshots
 
-<groupId>com.github.stinkbird</groupId>
-<artifactId>helpspot_java_sdk</artifactId>
-<version>1.0-SNAPSHOT</version>
+groupId = com.github.stinkbird
+artifactId = helpspot_java_sdk
+version = 1.0-SNAPSHOT
 
 
 How to use this sdk?
