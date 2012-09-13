@@ -46,38 +46,17 @@
   <xs:element name="fUrgent" type="xs:integer"/>
   <xs:element name="xCategory" type="xs:NCName"/>
   <xs:element name="dtGMTOpened" type="xs:string"/>
-  <xs:element name="dtGMTClosed">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="dtGMTClosed" type="xs:string"/>
   <xs:element name="sRequestPassword" type="xs:NCName"/>
   <xs:element name="sTitle" type="xs:string"/>
   <xs:element name="sUserId" type="xs:string"/>
-  <xs:element name="sFirstName">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="sFirstName" type="xs:string"/>
   <xs:element name="sLastName" type="xs:string"/>
-  <xs:element name="sEmail">
-    <xs:complexType/>
-  </xs:element>
-  <xs:element name="sPhone">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="sEmail" type="xs:string"/>
+  <xs:element name="sPhone" type="xs:string"/>
   <xs:element name="iLastReplyBy" type="xs:integer"/>
   <xs:element name="fTrash" type="xs:integer"/>
-  <xs:element name="dtGMTTrashed">
-    <xs:complexType/>
-  </xs:element>
+  <xs:element name="dtGMTTrashed" type="xs:string"/>
   <xs:element name="fullname" type="xs:string"/>
-  <xs:element name="tNote">
-    <xs:complexType mixed="true">
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="span"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="span">
-    <xs:complexType mixed="true">
-      <xs:attribute name="class" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="tNote" type="xs:string"/>
 </xs:schema>
