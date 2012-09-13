@@ -64,27 +64,27 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "item")
 public class Item {
 
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequestHistory;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger xRequest;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String xPerson;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String dtGMTChange;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fPublic;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fInitial;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String tLog;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected TNote tNote;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected String tEmailHeaders;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fNoteIsHTML;
-    @XmlElement(required = true)
+    @XmlElement(required = false)
     protected BigInteger fMergedFromRequest;
     protected Files files;
 
