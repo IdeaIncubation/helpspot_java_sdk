@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.delete_time_event;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "deleted"
 })
 @XmlRootElement(name = "results")
-public class Results {
+public class Results implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 3315067277838162717L;
+	
+	@XmlElement(required = false)
     protected BigInteger deleted;
 
     /**

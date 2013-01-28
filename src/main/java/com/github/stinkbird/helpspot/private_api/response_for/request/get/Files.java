@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -38,9 +40,11 @@ import javax.xml.bind.annotation.XmlType;
     "file"
 })
 @XmlRootElement(name = "files")
-public class Files {
+public class Files implements Serializable {
 
-    protected File file;
+	private static final long serialVersionUID = 7325940606967573358L;
+	
+	protected File file;
 
     /**
      * Gets the value of the file property.

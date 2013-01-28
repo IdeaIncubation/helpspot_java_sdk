@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.filter.get_stream;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -56,9 +57,11 @@ import javax.xml.bind.annotation.XmlType;
     "fMergedFromRequest"
 })
 @XmlRootElement(name = "history_note")
-public class HistoryNote {
+public class HistoryNote implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 7502505959467429923L;
+	
+	@XmlElement(required = false)
     protected BigInteger xRequestHistory;
     @XmlElement(required = false)
     protected BigInteger xRequest;

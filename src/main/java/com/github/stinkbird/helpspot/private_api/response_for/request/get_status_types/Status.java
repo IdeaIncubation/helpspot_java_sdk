@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_status_types;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,9 +43,11 @@ import javax.xml.bind.annotation.XmlType;
     "xStatus"
 })
 @XmlRootElement(name = "status")
-public class Status {
+public class Status implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 8202592377195088499L;
+	
+	@XmlElement(required = false)
     protected String sStatus;
     @XmlElement(required = false)
     protected BigInteger xStatus;

@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.user.preferences;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -99,9 +100,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "tSignatureHTML"
 })
 @XmlRootElement(name = "preferences")
-public class Preferences {
+public class Preferences implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -7372356485426767061L;
+	
+	@XmlElement(required = false)
     protected BigInteger xPerson;
     @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

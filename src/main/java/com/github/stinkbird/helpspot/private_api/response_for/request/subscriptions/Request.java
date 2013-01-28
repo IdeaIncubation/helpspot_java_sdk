@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.subscriptions;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,9 +43,11 @@ import javax.xml.bind.annotation.XmlType;
     "xSubscriptions"
 })
 @XmlRootElement(name = "request")
-public class Request {
+public class Request implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 334872897798239618L;
+	
+	@XmlElement(required = false)
     protected BigInteger xRequest;
     @XmlElement(required = false)
     protected BigInteger xSubscriptions;

@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_mailboxes;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -44,9 +45,11 @@ import javax.xml.bind.annotation.XmlType;
     "sReplyEmail"
 })
 @XmlRootElement(name = "mailbox")
-public class Mailbox {
+public class Mailbox implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 2344868684616105704L;
+	
+	@XmlElement(required = false)
     protected BigInteger xMailbox;
     @XmlElement(required = false)
     protected String sReplyName;

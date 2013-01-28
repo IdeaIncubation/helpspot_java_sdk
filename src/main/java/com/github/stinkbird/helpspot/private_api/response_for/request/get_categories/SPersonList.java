@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_categories;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,9 +42,11 @@ import javax.xml.bind.annotation.XmlType;
     "person"
 })
 @XmlRootElement(name = "sPersonList")
-public class SPersonList {
+public class SPersonList implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 3780706182663530831L;
+	
+	@XmlElement(required = false)
     protected List<Person> person;
 
     /**

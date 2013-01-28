@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.customer.set_password_by_email;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "sPassword"
 })
 @XmlRootElement(name = "results")
-public class Results {
+public class Results implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 1908634696127073449L;
+	
+	@XmlElement(required = false)
     protected String sPassword;
 
     /**

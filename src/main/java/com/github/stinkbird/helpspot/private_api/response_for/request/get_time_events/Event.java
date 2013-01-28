@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_time_events;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -54,9 +55,11 @@ import javax.xml.bind.annotation.XmlType;
     "tDescription"
 })
 @XmlRootElement(name = "event")
-public class Event {
+public class Event implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 2130168974126510673L;
+	
+	@XmlElement(required = false)
     protected BigInteger xTimeId;
     @XmlElement(required = false)
     protected BigInteger xRequest;

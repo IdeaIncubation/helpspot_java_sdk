@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_custom_fields;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -33,7 +35,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "sRegex")
-public class SRegex {
+public class SRegex implements Serializable {
+
+	private static final long serialVersionUID = -2113084988304563384L;	
 
 
 }

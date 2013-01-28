@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_custom_fields;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -33,7 +35,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "lrgTextRows")
-public class LrgTextRows {
+public class LrgTextRows implements Serializable {
+
+	private static final long serialVersionUID = -2452336298927788358L;
 
 
 }

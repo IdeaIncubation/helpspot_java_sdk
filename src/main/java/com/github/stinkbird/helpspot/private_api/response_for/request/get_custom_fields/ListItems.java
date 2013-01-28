@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_custom_fields;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "item"
 })
 @XmlRootElement(name = "listItems")
-public class ListItems {
+public class ListItems implements Serializable {
 
-    protected List<String> item;
+	private static final long serialVersionUID = 2447276739030330787L;
+	
+	protected List<String> item;
 
     /**
      * Gets the value of the item property.

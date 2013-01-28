@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.filter.get_stream;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "historyNote"
 })
 @XmlRootElement(name = "stream")
-public class Stream {
+public class Stream implements Serializable {
 
-    @XmlElement(name = "history_note", required = false)
+	private static final long serialVersionUID = -7649131200994362448L;
+	
+	@XmlElement(name = "history_note", required = false)
     protected HistoryNote historyNote;
 
     /**

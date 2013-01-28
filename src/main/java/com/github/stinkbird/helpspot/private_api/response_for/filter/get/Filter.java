@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.filter.get;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,9 +42,11 @@ import javax.xml.bind.annotation.XmlType;
     "request"
 })
 @XmlRootElement(name = "filter")
-public class Filter {
+public class Filter implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -6959449195805059141L;
+	
+	@XmlElement(required = false)
     protected List<Request> request;
 
     /**

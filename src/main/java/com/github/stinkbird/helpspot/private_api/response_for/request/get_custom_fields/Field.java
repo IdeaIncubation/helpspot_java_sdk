@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_custom_fields;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -67,9 +68,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "isAlwaysVisible"
 })
 @XmlRootElement(name = "field")
-public class Field {
+public class Field implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -8942297056167162468L;
+	
+	@XmlElement(required = false)
     protected BigInteger xCustomField;
     @XmlElement(required = false)
     protected String fieldName;

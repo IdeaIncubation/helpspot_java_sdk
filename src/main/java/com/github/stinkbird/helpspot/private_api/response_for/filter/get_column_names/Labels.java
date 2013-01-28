@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.filter.get_column_names;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -94,9 +96,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "timetrack"
 })
 @XmlRootElement(name = "labels")
-public class Labels {
+public class Labels implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 3061176266817988583L;
+	
+	@XmlElement(required = false)
     protected String iLastReplyBy;
     @XmlElement(required = false)
     protected String fOpenedVia;

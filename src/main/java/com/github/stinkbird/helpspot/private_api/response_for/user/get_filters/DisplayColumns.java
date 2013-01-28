@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.user.get_filters;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,9 +66,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "dtGMTOpened"
 })
 @XmlRootElement(name = "displayColumns")
-public class DisplayColumns {
+public class DisplayColumns implements Serializable {
 
-    protected Takeit takeit;
+	private static final long serialVersionUID = 7323139963113767326L;
+	
+	protected Takeit takeit;
     protected Isunread isunread;
     protected View view;
     @XmlElement(required = false)

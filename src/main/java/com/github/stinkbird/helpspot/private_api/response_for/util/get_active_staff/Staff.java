@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.util.get_active_staff;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,9 +42,11 @@ import javax.xml.bind.annotation.XmlType;
     "person"
 })
 @XmlRootElement(name = "staff")
-public class Staff {
+public class Staff implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -11962088675805684L;
+	
+	@XmlElement(required = false)
     protected List<Person> person;
 
     /**

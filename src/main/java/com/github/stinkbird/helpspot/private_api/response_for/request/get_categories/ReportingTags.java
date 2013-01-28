@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_categories;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,9 +42,11 @@ import javax.xml.bind.annotation.XmlType;
     "tag"
 })
 @XmlRootElement(name = "reportingTags")
-public class ReportingTags {
+public class ReportingTags implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -5700175467209661900L;
+	
+	@XmlElement(required = false)
     protected List<Tag> tag;
 
     /**

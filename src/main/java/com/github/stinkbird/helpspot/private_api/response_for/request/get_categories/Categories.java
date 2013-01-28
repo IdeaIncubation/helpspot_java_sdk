@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_categories;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "category"
 })
 @XmlRootElement(name = "categories")
-public class Categories {
+public class Categories implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 1411983441516288876L;
+	
+	@XmlElement(required = false)
     protected Category category;
 
     /**

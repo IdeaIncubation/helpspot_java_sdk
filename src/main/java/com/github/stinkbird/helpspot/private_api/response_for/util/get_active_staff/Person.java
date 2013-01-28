@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.util.get_active_staff;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -101,9 +102,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "fullname"
 })
 @XmlRootElement(name = "person")
-public class Person {
+public class Person implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -711507308316128667L;
+	
+	@XmlElement(required = false)
     protected BigInteger xPerson;
     @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

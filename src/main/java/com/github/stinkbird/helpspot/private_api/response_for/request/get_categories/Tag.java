@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_categories;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,9 +43,11 @@ import javax.xml.bind.annotation.XmlType;
     "sReportingTag"
 })
 @XmlRootElement(name = "tag")
-public class Tag {
+public class Tag implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -1983486671439234468L;
+	
+	@XmlElement(required = false)
     protected BigInteger xReportingTag;
     @XmlElement(required = false)
     protected String sReportingTag;

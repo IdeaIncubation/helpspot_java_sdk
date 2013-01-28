@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.user.get_filters;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -33,7 +35,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "takeit")
-public class Takeit {
+public class Takeit implements Serializable {
 
+	private static final long serialVersionUID = 9041202310124965148L;
 
 }

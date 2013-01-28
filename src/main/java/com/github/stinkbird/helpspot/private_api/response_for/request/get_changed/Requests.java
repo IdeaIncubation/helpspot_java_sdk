@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_changed;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +43,11 @@ import javax.xml.bind.annotation.XmlType;
     "xRequest"
 })
 @XmlRootElement(name = "requests")
-public class Requests {
-
-    @XmlElement(required = false)
+public class Requests implements Serializable {
+	
+	private static final long serialVersionUID = 6058659118635021115L;
+	
+	@XmlElement(required = false)
     protected List<BigInteger> xRequest;
 
     /**

@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.unsubscribe;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "unsubscribed"
 })
 @XmlRootElement(name = "results")
-public class Results {
+public class Results implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 1232894445864189210L;
+	
+	@XmlElement(required = false)
     protected BigInteger unsubscribed;
 
     /**

@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -51,9 +52,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "privateUrl"
 })
 @XmlRootElement(name = "file")
-public class File {
+public class File implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -4373794390789497207L;
+	
+	@XmlElement(required = false)
     protected String sFileMimeType;
     @XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)

@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.user.preferences;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -33,7 +35,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
 @XmlRootElement(name = "sEmail2")
-public class SEmail2 {
+public class SEmail2 implements Serializable {
 
+	private static final long serialVersionUID = 7239867008413486241L;
 
 }

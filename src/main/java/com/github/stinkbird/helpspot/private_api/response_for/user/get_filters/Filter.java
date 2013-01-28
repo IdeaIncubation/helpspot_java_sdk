@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.user.get_filters;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -55,9 +56,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "unread"
 })
 @XmlRootElement(name = "filter")
-public class Filter {
+public class Filter implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -2986280717912479856L;
+	
+	@XmlElement(required = false)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "NMTOKEN")
     protected String xFilter;

@@ -8,6 +8,8 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_mailboxes;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,9 +41,11 @@ import javax.xml.bind.annotation.XmlType;
     "mailbox"
 })
 @XmlRootElement(name = "results")
-public class Results {
+public class Results implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -7274297541306304861L;
+	
+	@XmlElement(required = false)
     protected Mailbox mailbox;
 
     /**

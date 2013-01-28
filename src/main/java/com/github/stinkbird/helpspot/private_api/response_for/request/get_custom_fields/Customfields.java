@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_custom_fields;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -41,9 +42,11 @@ import javax.xml.bind.annotation.XmlType;
     "field"
 })
 @XmlRootElement(name = "customfields")
-public class Customfields {
+public class Customfields implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = -6984524759849505768L;
+	
+	@XmlElement(required = false)
     protected List<Field> field;
 
     /**

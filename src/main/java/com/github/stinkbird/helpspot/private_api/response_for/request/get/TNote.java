@@ -44,9 +44,11 @@ import javax.xml.bind.annotation.XmlType;
     "content"
 })
 @XmlRootElement(name = "tNote")
-public class TNote {
+public class TNote implements Serializable {
 
-    @XmlElementRef(name = "p", type = JAXBElement.class)
+	private static final long serialVersionUID = 3985729074541937630L;
+	
+	@XmlElementRef(name = "p", type = JAXBElement.class)
     @XmlMixed
     protected List<Serializable> content;
 

@@ -8,6 +8,7 @@
 
 package com.github.stinkbird.helpspot.private_api.response_for.request.get_categories;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +43,11 @@ import javax.xml.bind.annotation.XmlType;
     "xCustomField"
 })
 @XmlRootElement(name = "sCustomFieldList")
-public class SCustomFieldList {
+public class SCustomFieldList implements Serializable {
 
-    @XmlElement(required = false)
+	private static final long serialVersionUID = 6483435327070186978L;
+	
+	@XmlElement(required = false)
     protected List<BigInteger> xCustomField;
 
     /**
